@@ -56,7 +56,7 @@ getHTML.onclick = ()=>{
 
 getXML.onclick = ()=>{
     const request = new XMLHttpRequest();
-    request.open('GET', '/demo.xml');
+    request.open('GET', 'demo.xml');
     request.onreadystatechange = ()=>{
         if(request.readyState === 4){
             const status = request.status;
@@ -73,7 +73,7 @@ getXML.onclick = ()=>{
 
 getJSON.onclick = ()=>{
     const request = new XMLHttpRequest();
-    request.open('GET', '../db/page1.json');
+    request.open('GET', '../../db/page1.json');
     request.onreadystatechange = ()=>{
         if(request.readyState === 4){
             const {status} = request;
@@ -90,7 +90,7 @@ getJSON.onclick = ()=>{
 let i = 1;
 getPAGE.onclick = ()=>{
     const request = new XMLHttpRequest();
-    request.open('GET', `../db/page${++i}.json`);
+    request.open('GET', `../../db/page${++i}.json`);
     request.onreadystatechange = ()=>{
         if(request.readyState === 4){
             const {status} = request;
