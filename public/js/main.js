@@ -38,7 +38,7 @@ getJS.onclick = ()=>{
 
 getHTML.onclick = ()=>{
     const request = new XMLHttpRequest();
-    request.open('GET', '/demo.html');
+    request.open('GET', 'demo.html');
     request.onreadystatechange = ()=>{
         if(request.readyState === 4){
             const status = request.status;
@@ -56,7 +56,7 @@ getHTML.onclick = ()=>{
 
 getXML.onclick = ()=>{
     const request = new XMLHttpRequest();
-    request.open('GET', 'demo.xml');
+    request.open('GET', '../demo.xml');
     request.onreadystatechange = ()=>{
         if(request.readyState === 4){
             const status = request.status;
