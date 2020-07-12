@@ -2,7 +2,7 @@ console.log('我是main.js');
 
 getCSS.onclick = ()=>{
     const request = new XMLHttpRequest();
-    request.open("GET","public/style.css");
+    request.open("GET","../style.css");
     request.onreadystatechange = ()=>{
         if(request.readyState === 4){
             const status = request.status;
@@ -20,7 +20,7 @@ getCSS.onclick = ()=>{
 
 getJS.onclick = ()=>{
     const request = new XMLHttpRequest();
-    request.open('GET','/js/demo.js');
+    request.open('GET','../js/demo.js');
     request.onreadystatechange = ()=>{
         if(request.readyState === 4){
             const status = request.status;
@@ -38,7 +38,7 @@ getJS.onclick = ()=>{
 
 getHTML.onclick = ()=>{
     const request = new XMLHttpRequest();
-    request.open('GET', '/html/demo.html');
+    request.open('GET', '/demo.html');
     request.onreadystatechange = ()=>{
         if(request.readyState === 4){
             const status = request.status;
@@ -73,7 +73,7 @@ getXML.onclick = ()=>{
 
 getJSON.onclick = ()=>{
     const request = new XMLHttpRequest();
-    request.open('GET', '/db/page1.json');
+    request.open('GET', '../db/page1.json');
     request.onreadystatechange = ()=>{
         if(request.readyState === 4){
             const {status} = request;
@@ -90,7 +90,7 @@ getJSON.onclick = ()=>{
 let i = 1;
 getPAGE.onclick = ()=>{
     const request = new XMLHttpRequest();
-    request.open('GET', `/db/page${++i}.json`);
+    request.open('GET', `../db/page${++i}.json`);
     request.onreadystatechange = ()=>{
         if(request.readyState === 4){
             const {status} = request;
