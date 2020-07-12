@@ -106,8 +106,8 @@ getPAGE.onclick = ()=>{
             }
         }
     }
-    if(i === 3){
-        i = 0;
+    if(i === 4){
+        i = 1;
     }
     request.send();
 } 
