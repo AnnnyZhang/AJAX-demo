@@ -26,7 +26,7 @@ var server = http.createServer(function(request, response){
     response.setHeader('Content-Type', 'text/html;charset=utf-8');
     let str = fs.readFileSync('public/html/index.html').toString();
     const arrstr = JSON.parse(fs.readFileSync('db/page1.json')).map(item=>`<li>${item.id}</li>`).join('');
-    str = str.replace('{{page}}', `<ul>${arrstr}</ul>`);
+    str = str.replace('{{page}}', arrstr);
     response.write(str);
     response.end();
   }else if(path === '/public/js/main.js'){
