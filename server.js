@@ -25,7 +25,7 @@ var server = http.createServer(function(request, response){
     response.statusCode = 200
     response.setHeader('Content-Type', 'text/html;charset=utf-8');
     let str = fs.readFileSync('public/html/index.html').toString();
-    const arrstr = JSON.parse(fs.readFileSync('../../db/page1.json')).map(item=>`<li>${item.id}</li>`).join('');
+    const arrstr = JSON.parse(fs.readFileSync('db/page1.json')).map(item=>`<li>${item.id}</li>`).join('');
     str = str.replace('{{page}}', `<ul id=xxx>${arrstr}</ul>`);
     response.write(str);
     response.end();
