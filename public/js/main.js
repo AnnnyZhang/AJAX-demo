@@ -2,7 +2,7 @@ console.log('我是main.js');
 
 getCSS.onclick = ()=>{
     const request = new XMLHttpRequest();
-    request.open("GET","/public/style.css");
+    request.open("GET","public/style.css");
     request.onreadystatechange = ()=>{
         if(request.readyState === 4){
             const status = request.status;
